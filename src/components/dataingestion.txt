@@ -1,0 +1,25 @@
+Summary of Data Ingestion (data_ingestion.py)
+The Data Ingestion module is responsible for loading and preparing the dataset for further processing. Here’s a breakdown of its key functionalities:
+1.Loading the Dataset:
+
+Reads data from a CSV file (stud.csv) into a pandas DataFrame.
+
+2.Splitting the Data:
+
+The dataset is split into training (80%) and testing (20%) sets using train_test_split() from sklearn.model_selection.
+
+3.Saving the Data:
+
+The training and testing datasets are stored as separate CSV files:
+
+train.csv (for model training)
+
+test.csv (for model evaluation)
+
+4.Logging and Exception Handling:
+
+Implements logging to track errors and process status.
+
+Uses a try-except block to handle errors during ingestion.
+
+This step ensures that the data is properly organized before model training.

@@ -1,0 +1,34 @@
+Summary of model_trainer.py
+The model_trainer.py script is responsible for training multiple machine learning models and selecting the best-performing one based on evaluation metrics. Here’s a breakdown:
+
+Imports and Dependencies:
+
+Uses various regression models such as RandomForestRegressor, DecisionTreeRegressor, GradientBoostingRegressor, LinearRegression, XGBRegressor, CatBoostRegressor, and AdaBoostRegressor.
+
+Includes utilities for saving models and evaluating their performance.
+
+ModelTrainer Class:
+
+Defines a configuration class to store the trained model file path.
+
+Implements initiate_model_trainer() method to:
+
+Split training and test data.
+
+Train multiple models with hyperparameter tuning.
+
+Evaluate each model and determine the best one using the highest R² score.
+
+Save the best-performing model if it meets the threshold (R² > 0.6).
+
+Return the R² score of the best model.
+
+Model Selection Process:
+
+Defines a dictionary of models with hyperparameter tuning configurations.
+
+Evaluates models using evaluate_models(), storing their R² scores.
+
+Selects the model with the highest R² score and saves it.
+
+If no model has an acceptable score, it raises an exception.

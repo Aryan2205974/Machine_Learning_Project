@@ -1,0 +1,44 @@
+Summary of Data Transformation
+The data_transformation.py script is responsible for preparing the dataset for model training by applying transformations to numerical and categorical features. Below are the key aspects of the data transformation process:
+
+1.Configuration:
+
+The DataTransformationConfig class sets the path for storing the preprocessing object (preprocessor.pkl).
+
+2.Preprocessing Pipelines:
+
+2.1Numerical Columns (writing_score, reading_score):
+
+Missing values are imputed using the median strategy.
+
+Features are scaled using StandardScaler.
+
+2.2Categorical Columns (gender, race_ethnicity, parental_level_of_education, lunch, test_preparation_course):
+
+Missing values are imputed using the most frequent value.
+
+One-hot encoding is applied to convert categorical variables into numerical form.
+
+Scaling is applied using StandardScaler (without mean).
+
+3.Data Processing Workflow:
+
+Reads the training and testing datasets from CSV files.
+
+Applies the preprocessing pipeline to both training and testing data.
+
+Splits the dataset into input features (X) and target (math_score).
+
+Saves the transformed training and testing arrays.
+
+Stores the preprocessing object for later use in making predictions.
+
+This transformation ensures that the dataset is clean, standardized, and ready for feeding into machine learning models.
+
+
+
+
+
+
+
+
